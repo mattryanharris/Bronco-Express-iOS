@@ -57,10 +57,14 @@ struct Shuttle: Codable {
 
 class ViewController: UIViewController {
     
+    
     var shuttles = [Shuttle]()
     
     let API_URL = "https://broncoshuttle.com/Route/3164/Stop/1592066/Arrivals?customerID=21"
 
+    @IBOutlet weak var busID: UILabel!
+    @IBOutlet weak var arrivalMin: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,6 +81,9 @@ class ViewController: UIViewController {
                 //printing all the hero names
                 for shuttle in self.shuttles{
                     print(shuttle.minutes)
+                    print(shuttle.busName)
+                    self.busID.text = shuttle.busName
+                    self.arrivalMin.text = String(shuttle.minutes)
                 }
                 
             }catch let err{
