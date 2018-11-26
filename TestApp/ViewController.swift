@@ -87,9 +87,9 @@ class ViewController: UIViewController {
                 }
                 */
                 
-                self.busID.text = self.shuttles[0].busName
+                self.busID.text = String("Bus ") + self.shuttles[0].busName
                 
-                self.arrivalMin.text = String(self.shuttles[0].minutes)
+                self.arrivalMin.text = String(self.shuttles[0].minutes) + String(" minutes until arrival")
                 
                 
                 
