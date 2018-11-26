@@ -64,10 +64,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         Alamofire.request(API_URL).responseJSON { response in
             let json = response.data
             
@@ -79,12 +79,19 @@ class ViewController: UIViewController {
                 self.shuttles = try decoder.decode([Shuttle].self, from: json!)
                 
                 //printing all the hero names
-                for shuttle in self.shuttles{
+                /* for shuttle in self.shuttles{
                     print(shuttle.minutes)
                     print(shuttle.busName)
                     self.busID.text = shuttle.busName
                     self.arrivalMin.text = String(shuttle.minutes)
                 }
+                */
+                
+                self.busID.text = self.shuttles[0].busName
+                
+                self.arrivalMin.text = String(self.shuttles[0].minutes)
+                
+                
                 
             }catch let err{
                 print(err)
@@ -93,6 +100,9 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func refresh(_ sender: Any) {
+        viewDidLoad()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
