@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     
     var shuttles = [Shuttle]()
     
-    let API_URL = "https://broncoshuttle.com/Route/3164/Stop/33835/Arrivals?customerID=21"
+    let API_URL = "https://broncoshuttle.com/Route/3164/Stop/1592066/Arrivals?customerID=21"
 
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
