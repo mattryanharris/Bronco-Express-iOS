@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import Foundation
 
-
 struct Shuttle: Codable {
     let routeID, stopID, vehicleID, welcomeStopID: Int?
     let welcomeVehicleID: Int?
@@ -63,15 +62,15 @@ class ViewController: UIViewController {
     var currentRoute = "Route A"
     var currentStop = "South Campus/Temple"
     
-    let routeData = ["Route A", "Route B", "Route B2 via Lyle Ctr", "Route C"]
+    let routeData = ["Route A", "Route B", "Route B2", "Route C"]
     
-    let routeAData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM"]
+    let routeAData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM", "Camphor Lane/Lot M", "Campus Center Market", "Camphor Lane", "Building 7 - Enviormental Design", "Building 94", "Rose Garden", "Building 91", "CLA", "Parking Structure", "Red Gum/Univ. Dr/Lot F2", "Resident Halls", "Building 91", "Student Health Services"]
     
-    let routeBData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM"]
+    let routeBData = ["Interim Design Center Building", "Oak Lane/F Lots", "Cypress Lane/F Lots", "Resident Halls", "Building One", "Student Health Services", "Collins College/Kellog West (Southbound)", "Agriscapes/Farm Store", "South Campus/Temple", "Collins College/Kellog West (Northbound)", "Building 7 - Enviormental Design", "Building 94", "Rose Garden/College of Business", "University Police/Parking Services"]
     
-    let routeB2Data = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM"]
+    let routeB2Data = ["Interim Design Center Building", "Oak Lane/F Lots", "Cypress Lane/F Lots", "Resident Halls", "Building One", "Student Health Services", "Collins College/Kellog West (Southbound)", "Regenerative Studies", "Agriscapes/Farm Store", "South Campus/Temple", "Collins College/Kellog West (Northbound)", "Building 7 - Enviormental Design", "Building 94", "Rose Garden/College of Business", "University Police/Parking Services"]
     
-    let routeCData = ["Test", "Overflow Parking Lot", "Innovation Way at IBM"]
+    let routeCData = ["Parking Lot B", "PS2 Southeast", "PS2 Northeast", "Camphor Lane/Lot M", "Campus Center Marketplace", "Camphor Lane", "PS2 Northwest", "PS2 Southwest"]
 
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
@@ -87,6 +86,10 @@ class ViewController: UIViewController {
         
         if currentRoute == "Route A" {
             routeNum = "3164"
+        } else if currentRoute == "Route B" {
+            routeNum = "4512"
+        } else if currentRoute == "Route B2" {
+            routeNum = "4513"
         } else if currentRoute == "Route C" {
             routeNum = "4515"
         }
@@ -97,6 +100,70 @@ class ViewController: UIViewController {
             stopNum = "1592066"
         } else if currentStop == "Innovation Way at IBM" {
             stopNum = "1592165"
+        } else if currentStop == "Campahor Lane/Lot M" {
+            stopNum = "35348"
+        } else if currentStop == "Campus Center Market" {
+            stopNum = "35362"
+        } else if currentStop == "Building 7 - Enviormental Design" {
+            stopNum = "48396"
+        } else if currentStop == "Building 94" {
+            stopNum = "33803"
+        } else if currentStop == "Rose Garden" {
+            stopNum = "33817"
+        } else if currentStop == "Building 91" {
+            stopNum = "33835"
+        } else if currentStop == "CLA" {
+            stopNum = "33851"
+        } else if currentStop == "Parking Structure" {
+            stopNum = "486770"
+        } else if currentStop == "Red Gum/Univ. Dr/Lot F2" {
+            stopNum = "486771"
+        } else if currentStop == "Resident Halls" {
+            stopNum = "486772"
+        } else if currentStop == "Building 1" {
+            stopNum = "486773"
+        } else if currentStop == "Student Health Services" {
+            stopNum = "34999"
+        } else if currentStop == "Interim Design Center Building" {
+            stopNum = "487157"
+        } else if currentStop == "Oak Lane/F Lots" {
+            stopNum = "485416"
+        } else if currentStop == "Cypress Lane/F Lots" {
+            stopNum = "487168"
+        } else if currentStop == "Student Health Services" {
+            stopNum = "34999"
+        } else if currentStop == "Residents Hall" {
+            stopNum = "487168"
+        } else if currentStop == "Collins College/Kellog West (Southbound)" {
+            stopNum = "1231738"
+        } else if currentStop == "Agriscapes/Farm Store" {
+            stopNum = "487171"
+        } else if currentStop == "South Campus/Temple" {
+            stopNum = "36359"
+        } else if currentStop == "Collins College/Kellog West (Northbound)" {
+            stopNum = "485601"
+        } else if currentStop == "Collins College/Kellog West (Northbound)" {
+            stopNum = "485601"
+        } else if currentStop == "Univ. Police/Parking Services" {
+            stopNum = "487173"
+        } else if currentStop == "Parking Lot B" {
+            stopNum = "35317"
+        } else if currentStop == "PS2 Southeast" {
+            stopNum = "2310798"
+        } else if currentStop == "PS2 Northeast" {
+            stopNum = "2310799"
+        } else if currentStop == "Camphor Lane/Lot M" {
+            stopNum = "35348"
+        } else if currentStop == "Campus Center Marketplace" {
+            stopNum = "35362"
+        } else if currentStop == "Camphor Lane" {
+            stopNum = "35377"
+        } else if currentStop == "PS2 Northwest" {
+            stopNum = "2310800"
+        } else if currentStop == "PS2 Southwest" {
+            stopNum = "2310801"
+        } else if currentStop == "Regenerative Studies" {
+            stopNum = "487170"
         }
         
         let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + stopNum + "/Arrivals?customerID=21"
@@ -129,6 +196,7 @@ class ViewController: UIViewController {
                 */
                 
                 //self.progress.transform = self.progress.transform.scaledBy(x: 1, y: 5)
+                
                 self.progress.trackTintColor = #colorLiteral(red: 0.8900991082, green: 0.8902519345, blue: 0.8900894523, alpha: 1)
                 
                 self.progress.progressTintColor = #colorLiteral(red: 0, green: 0.7798785567, blue: 0, alpha: 1)
@@ -159,7 +227,6 @@ class ViewController: UIViewController {
                    
                     self.eta.text = "ETA @ " + self.shuttles[0].arriveTime
                     
-                    
                     self.progress.setProgress(Float(progressPercent), animated: true)
                     if self.shuttles[0].minutes == 0 {
                         self.arrivalMin.text = "The shuttle is arriving shortly"
@@ -167,11 +234,9 @@ class ViewController: UIViewController {
                         self.arrivalMin.text = String(self.shuttles[0].minutes) + String(" minutes until arrival")
                     }
                 }
-                
-            }catch let err{
+            } catch let err{
                 print(err)
             }
-
         }
     }
 
@@ -232,7 +297,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 currentStop = routeCData[row]
             }
         }
-        currentRoute = routeData[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
