@@ -14,7 +14,7 @@ import Foundation
 struct Shuttle: Codable {
     let routeID, stopID, vehicleID, welcomeStopID: Int?
     let welcomeVehicleID: Int?
-    let arriveTime: String?
+    let arriveTime: String
     let welcomeRouteID, direction: Int
     let schedulePrediction, isLayover: Bool
     let rules: [String]
@@ -22,7 +22,7 @@ struct Shuttle: Codable {
     let secondsToArrival: Double
     let isLastStop, onBreak: Bool
     let scheduledArriveTime: String?
-    let scheduledMinutes: Int
+    let scheduledMinutes: Float
     let tripID: String?
     let busName, vehicleName, routeName: String
     let minutes: Int
@@ -60,11 +60,13 @@ class ViewController: UIViewController {
     
     var shuttles = [Shuttle]()
     
-    let API_URL = "https://broncoshuttle.com/Route/3164/Stop/1592066/Arrivals?customerID=21"
+    let API_URL = "https://broncoshuttle.com/Route/3164/Stop/33835/Arrivals?customerID=21"
 
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
-
+    @IBOutlet var eta: UILabel!
+    
+    @IBOutlet weak var progress: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -87,18 +89,45 @@ class ViewController: UIViewController {
                 }
                 */
                 
-                self.busID.text = String("Bus ") + self.shuttles[0].busName
+                //self.progress.transform = self.progress.transform.scaledBy(x: 1, y: 5)
+                self.progress.trackTintColor = #colorLiteral(red: 0.8900991082, green: 0.8902519345, blue: 0.8900894523, alpha: 1)
                 
-                if self.shuttles[0].minutes == 0 {
-                    self.arrivalMin.text = "The shuttle is arriving shortly"
-                } else {
-                   self.arrivalMin.text = String(self.shuttles[0].minutes) + String(" minutes until arrival")
+                self.progress.progressTintColor = #colorLiteral(red: 0, green: 0.7798785567, blue: 0, alpha: 1)
+                
+                self.progress.layer.cornerRadius = 5
+                self.progress.clipsToBounds = true
+               
+
+                
+                if self.shuttles.isEmpty == true {
+                    print("There are no buses")
+                    self.busID.text = String("There are no active buses")
+                    exit(0)
                 }
+                    
                 
+                else {
+                    self.busID.text = String("Bus ") + self.shuttles[0].busName
+                    
+                    var progressPercent : Float = 1
                 
-                
-                
-                
+                    if (self.shuttles[0].minutes != 0){
+                        progressPercent =  1 - (Float(self.shuttles[0].minutes) / 30)
+                    }
+                    
+                    print(progressPercent)
+                    print(self.shuttles[0].secondsToArrival)
+                   
+                    self.eta.text = "ETA @ " + self.shuttles[0].arriveTime
+                    
+                    
+                    self.progress.setProgress(Float(progressPercent), animated: true)
+                    if self.shuttles[0].minutes == 0 {
+                        self.arrivalMin.text = "The shuttle is arriving shortly"
+                    } else {
+                        self.arrivalMin.text = String(self.shuttles[0].minutes) + String(" minutes until arrival")
+                    }
+                }
                 
             }catch let err{
                 print(err)
