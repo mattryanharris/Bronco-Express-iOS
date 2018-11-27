@@ -60,16 +60,55 @@ class ViewController: UIViewController {
     
     var shuttles = [Shuttle]()
     
-    let API_URL = "https://broncoshuttle.com/Route/3164/Stop/1592066/Arrivals?customerID=21"
+    var currentRoute = "Route A"
+    var currentStop = "South Campus/Temple"
+    
+    let routeData = ["Route A", "Route B", "Route B2 via Lyle Ctr", "Route C"]
+    
+    let routeAData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM"]
+    
+    let routeBData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM"]
+    
+    let routeB2Data = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM"]
+    
+    let routeCData = ["Test", "Overflow Parking Lot", "Innovation Way at IBM"]
 
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
     @IBOutlet var eta: UILabel!
-    
+    @IBOutlet var route: UIPickerView!
+    @IBOutlet var stop: UIPickerView!
     @IBOutlet weak var progress: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        var routeNum = "3164"
+        var stopNum = "33803"
+        
+        if currentRoute == "Route A" {
+            routeNum = "3164"
+        } else if currentRoute == "Route C" {
+            routeNum = "4515"
+        }
+        
+        if currentStop == "South Campus/Temple" {
+            stopNum = "36359"
+        }  else if currentStop == "Overflow Parking Lot" {
+            stopNum = "1592066"
+        } else if currentStop == "Innovation Way at IBM" {
+            stopNum = "1592165"
+        }
+        
+        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + stopNum + "/Arrivals?customerID=21"
+        
+        print(API_URL)
+        
+        self.route.delegate = self
+        self.route.dataSource = self
+        
+        self.stop.delegate = self
+        self.stop.dataSource = self
+        
         Alamofire.request(API_URL).responseJSON { response in
             let json = response.data
             
@@ -97,12 +136,12 @@ class ViewController: UIViewController {
                 self.progress.layer.cornerRadius = 5
                 self.progress.clipsToBounds = true
                
-
+                print(self.currentRoute)
+                print(self.currentStop)
                 
                 if self.shuttles.isEmpty == true {
                     print("There are no buses")
                     self.busID.text = String("There are no active buses")
-                    exit(0)
                 }
                     
                 
@@ -141,6 +180,82 @@ class ViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == route {
+            return routeData.count
+        } else if pickerView == stop{
+            if currentRoute == "Route A" {
+                return routeAData.count
+            }
+                
+            else if currentRoute == "Route B" {
+                return routeBData.count
+            }
+                
+            else if currentRoute == "Route B2" {
+                return routeB2Data.count
+            }
+                
+            else if currentRoute == "Route C" {
+                return routeCData.count
+            }
+        }
+        return 0
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView == route {
+            currentRoute = routeData[row]
+        } else if pickerView == stop{
+            if currentRoute == "Route A" {
+                currentStop = routeAData[row]
+            }
+                
+            else if currentRoute == "Route B" {
+                currentStop = routeBData[row]
+            }
+                
+            else if currentRoute == "Route B2" {
+                currentStop = routeB2Data[row]
+            }
+                
+            else if currentRoute == "Route C" {
+                currentStop = routeCData[row]
+            }
+        }
+        currentRoute = routeData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == route {
+            return routeData[row]
+        } else if pickerView == stop{
+            if currentRoute == "Route A" {
+                return routeAData[row]
+            }
+            
+            else if currentRoute == "Route B" {
+                return routeBData[row]
+            }
+            
+            else if currentRoute == "Route B2" {
+                return routeB2Data[row]
+            }
+            
+            else if currentRoute == "Route C" {
+                return routeCData[row]
+            }
+        }
+        return "Test"
     }
 }
 
