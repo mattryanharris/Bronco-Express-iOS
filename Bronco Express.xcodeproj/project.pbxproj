@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34401D2C21AFBCB3009DFA8C /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 34401D2B21AFBCB3009DFA8C /* fonts */; };
+		34401D2D21AFBE46009DFA8C /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 34401D2B21AFBCB3009DFA8C /* fonts */; };
 		3472835821AC9C0E008957CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3472835721AC9C0E008957CB /* AppDelegate.swift */; };
 		3472835A21AC9C0E008957CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3472835921AC9C0E008957CB /* ViewController.swift */; };
 		3472835D21AC9C0E008957CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3472835B21AC9C0E008957CB /* Main.storyboard */; };
@@ -30,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0B578C6C10D9E626DF80A681 /* Pods-TestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAppUITests/Pods-TestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2B1CC20DE026D27EA727FA26 /* Pods-TestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestAppUITests/Pods-TestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34401D2B21AFBCB3009DFA8C /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		3472835421AC9C0E008957CB /* Bronco Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bronco Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3472835721AC9C0E008957CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3472835921AC9C0E008957CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -101,6 +104,7 @@
 				3472835721AC9C0E008957CB /* AppDelegate.swift */,
 				3472835921AC9C0E008957CB /* ViewController.swift */,
 				3472835B21AC9C0E008957CB /* Main.storyboard */,
+				34401D2B21AFBCB3009DFA8C /* fonts */,
 				3472835E21AC9C0E008957CB /* Assets.xcassets */,
 				3472836021AC9C0E008957CB /* LaunchScreen.storyboard */,
 				3472836321AC9C0E008957CB /* Info.plist */,
@@ -215,6 +219,7 @@
 				3472836221AC9C0E008957CB /* LaunchScreen.storyboard in Resources */,
 				3472835F21AC9C0E008957CB /* Assets.xcassets in Resources */,
 				3472835D21AC9C0E008957CB /* Main.storyboard in Resources */,
+				34401D2C21AFBCB3009DFA8C /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34401D2D21AFBE46009DFA8C /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

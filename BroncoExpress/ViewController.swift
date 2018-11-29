@@ -138,6 +138,8 @@ class ViewController: UIViewController {
         "PS2 Southwest" : 2310801,
     ]
     
+    var selectedRoute : [String:Int]?
+    
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
     @IBOutlet var eta: UILabel!
@@ -161,7 +163,9 @@ class ViewController: UIViewController {
             routeNum = "4515"
         }
         
-        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
+        //let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
+        
+        let API_URL = "https://www.cpp.edu/~mrharris/demoJSON.json"
         
         print(API_URL)
         print(API_URL)
@@ -172,6 +176,19 @@ class ViewController: UIViewController {
         
         self.stop.delegate = self
         self.stop.dataSource = self
+        
+        // fatal error testing for custom font loading
+        /*guard let customFont = UIFont(name: "Lato-Light", size: 20.0) else {
+            fatalError("""
+        Failed to load the "CustomFont-Light" font.
+        Make sure the font file is included in the project and the font name is spelled correctly.
+        """
+            )
+        }
+        
+        arrivalMin.font = UIFontMetrics.default.scaledFont(for: customFont) */
+            
+        self.eta.font = UIFont(name: "Lato-Light", size: 15.0)
         
         Alamofire.request(API_URL).responseJSON { response in
             let json = response.data
