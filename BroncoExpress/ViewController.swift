@@ -61,8 +61,7 @@ class ViewController: UIViewController {
     
     var currentRoute = "Route A"
     var currentStop = "36359"
-    
-    
+
     let routeData = ["Route A", "Route B", "Route B2", "Route C"]
     
     let routeAData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBW", "Camphor Lane/Lot M", "Campus Center Market", "Camphor Lane", "Building 7 - Enviormental Design", "Building 94", "Rose Garden", "Building 91", "CLA", "Parking Structure", "Red Gum/Univ. Dr/Lot F2", "Resident Halls", "Building 91", "Student Health Services"]
@@ -163,9 +162,9 @@ class ViewController: UIViewController {
             routeNum = "4515"
         }
         
-        //let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
+        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
         
-        let API_URL = "https://www.cpp.edu/~mrharris/demoJSON.json"
+        //let API_URL = "https://www.cpp.edu/~mrharris/demoJSON.json"
         
         print(API_URL)
         print(API_URL)
@@ -176,6 +175,7 @@ class ViewController: UIViewController {
         
         self.stop.delegate = self
         self.stop.dataSource = self
+        
         
         // fatal error testing for custom font loading
         /*guard let customFont = UIFont(name: "Lato-Light", size: 20.0) else {
@@ -264,11 +264,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    
+        
         if pickerView == route {
             return routeData.count
         } else if pickerView == stop{
