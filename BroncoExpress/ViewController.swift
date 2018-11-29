@@ -60,29 +60,96 @@ class ViewController: UIViewController {
     var shuttles = [Shuttle]()
     
     var currentRoute = "Route A"
-    var currentStop = "South Campus/Temple"
+    var currentStop = "36359"
+    
     
     let routeData = ["Route A", "Route B", "Route B2", "Route C"]
     
-    let routeAData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBM", "Camphor Lane/Lot M", "Campus Center Market", "Camphor Lane", "Building 7 - Enviormental Design", "Building 94", "Rose Garden", "Building 91", "CLA", "Parking Structure", "Red Gum/Univ. Dr/Lot F2", "Resident Halls", "Building 91", "Student Health Services"]
+    let routeAData = ["South Campus/Temple", "Overflow Parking Lot", "Innovation Way at IBW", "Camphor Lane/Lot M", "Campus Center Market", "Camphor Lane", "Building 7 - Enviormental Design", "Building 94", "Rose Garden", "Building 91", "CLA", "Parking Structure", "Red Gum/Univ. Dr/Lot F2", "Resident Halls", "Building 91", "Student Health Services"]
     
-    let routeBData = ["Interim Design Center Building", "Oak Lane/F Lots", "Cypress Lane/F Lots", "Resident Halls", "Building One", "Student Health Services", "Collins College/Kellog West (Southbound)", "Agriscapes/Farm Store", "South Campus/Temple", "Collins College/Kellog West (Northbound)", "Building 7 - Enviormental Design", "Building 94", "Rose Garden/College of Business", "University Police/Parking Services"]
+    let routeBData = ["Interim Design Center Building 89", "Oak Lane/F Lots", "Cypress Lane/F Lots", "Residents Hall", "Building 1", "Student Health Services", "Collins College/Kellogg West (Southbound)", "Agriscapes/Farm Store", "South Campus/Temple", "Collins College/Kellogg West (Northbound)", "Building 7 - Enviormental Science", "Building 94", "Rose Garden/College of Business", "University Police/Parking Services"]
     
-    let routeB2Data = ["Interim Design Center Building", "Oak Lane/F Lots", "Cypress Lane/F Lots", "Resident Halls", "Building One", "Student Health Services", "Collins College/Kellog West (Southbound)", "Regenerative Studies", "Agriscapes/Farm Store", "South Campus/Temple", "Collins College/Kellog West (Northbound)", "Building 7 - Enviormental Design", "Building 94", "Rose Garden/College of Business", "University Police/Parking Services"]
+    let routeB2Data = ["Interim Design Center Building 89", "Oak Lane/F Lots", "Cypress Lane/F Lots", "Residents Hall", "Building 1", "Student Health Services", "Collins College/Kellogg West (Southbound)", "Regenerative Studies", "Agriscapes/Farm Store", "South Campus/Temple", "Collins College/Kellogg West (Northbound)", "Building 7 - Enviormental Design", "Building 94", "Rose Garden/College of Business", "University Police/Parking Services"]
     
     let routeCData = ["Parking Lot B", "PS2 Southeast", "PS2 Northeast", "Camphor Lane/Lot M", "Campus Center Marketplace", "Camphor Lane", "PS2 Northwest", "PS2 Southwest"]
-
+    
+    var routeAStops: [String:Int] = [
+        "South Campus/Temple" : 36359,
+        "Overflow Parking Lot" : 1592066,
+        "Innovation Way at IBW" : 1592165,
+        "Camphor Lane/Lot M" : 35348,
+        "Campus Center Market" : 35362,
+        "Camphor Lane" : 35377,
+        "Building 7 - Enviormental Design" : 48396,
+        "Building 94" : 33803,
+        "Rose Garden" : 33817,
+        "Building 91" : 33835,
+        "CLA" : 33851,
+        "Parking Structure" : 486770,
+        "Red Gum/Univ. Dr/Lot F2" : 486771,
+        "Resident Halls" : 486772,
+        "Building 1" : 486773,
+        "Student Health Services" : 34999
+    ]
+    
+    var routeBStops : [String:Int] = [
+        "Interim Design Center Building 89" : 487167,
+        "Oak Lane/F Lots" : 485416,
+        "Cypress Lane/F Lots" : 487168,
+        "Residents Hall" : 487169,
+        "Building 1" : 486773,
+        "Student Health Services" : 34999,
+        "Collins College/Kellogg West (Southbound)" : 1231738,
+        "Agriscapes/Farm Store" : 487171,
+        "South Campus/Temple" : 36359,
+        "Collins College/Kellogg West (Northbound)" : 485601,
+        "Building 7 - Enviormental Science" : 48396,
+        "Building 94" : 33803,
+        "Rose Garden/College of Business" : 487172,
+        "University Police/Parking Services" : 487173
+    ]
+    
+    var routeB2Stops : [String:Int] = [
+        "Interim Design Center Building 89" : 487167,
+        "Oak Lane/F Lots" : 485416,
+        "Cypress Lane/F Lots" : 487168,
+        "Residents Hall" : 487169,
+        "Building 1" : 486773,
+        "Student Health Services" : 34999,
+        "Collins College/Kellogg West (Southbound)" : 1231738,
+        "Regenerative Studies" : 487170,
+        "Agriscapes/Farm Store" : 487171,
+        "South Campus/Temple" : 36359,
+        "Collins College/Kellogg West (Northbound)" : 485601,
+        "Building 7 - Enviormental Design" : 48396,
+        "Building 94" : 33803,
+        "Rose Garden/College of Business" : 487172,
+        "University Police/Parking Services" : 487173
+    ]
+    
+    var routeCStops : [String:Int] = [
+        "Parking Lot B" : 35317,
+        "PS2 Southeast" : 2310798,
+        "PS2 Northeast" : 2310799,
+        "Camphor Lane/Lot M" : 35348,
+        "Campus Center Marketplace" : 35362,
+        "Camphor Lane" : 35377,
+        "PS2 Northwest" : 2310800,
+        "PS2 Southwest" : 2310801,
+    ]
+    
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
     @IBOutlet var eta: UILabel!
     @IBOutlet var route: UIPickerView!
     @IBOutlet var stop: UIPickerView!
     @IBOutlet weak var progress: UIProgressView!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+    
         var routeNum = "3164"
-        var stopNum = "33803"
         
         if currentRoute == "Route A" {
             routeNum = "3164"
@@ -94,80 +161,10 @@ class ViewController: UIViewController {
             routeNum = "4515"
         }
         
-        if currentStop == "South Campus/Temple" {
-            stopNum = "36359"
-        }  else if currentStop == "Overflow Parking Lot" {
-            stopNum = "1592066"
-        } else if currentStop == "Innovation Way at IBM" {
-            stopNum = "1592165"
-        } else if currentStop == "Campahor Lane/Lot M" {
-            stopNum = "35348"
-        } else if currentStop == "Campus Center Market" {
-            stopNum = "35362"
-        } else if currentStop == "Building 7 - Enviormental Design" {
-            stopNum = "48396"
-        } else if currentStop == "Building 94" {
-            stopNum = "33803"
-        } else if currentStop == "Rose Garden" {
-            stopNum = "33817"
-        } else if currentStop == "Building 91" {
-            stopNum = "33835"
-        } else if currentStop == "CLA" {
-            stopNum = "33851"
-        } else if currentStop == "Parking Structure" {
-            stopNum = "486770"
-        } else if currentStop == "Red Gum/Univ. Dr/Lot F2" {
-            stopNum = "486771"
-        } else if currentStop == "Resident Halls" {
-            stopNum = "486772"
-        } else if currentStop == "Building 1" {
-            stopNum = "486773"
-        } else if currentStop == "Student Health Services" {
-            stopNum = "34999"
-        } else if currentStop == "Interim Design Center Building" {
-            stopNum = "487157"
-        } else if currentStop == "Oak Lane/F Lots" {
-            stopNum = "485416"
-        } else if currentStop == "Cypress Lane/F Lots" {
-            stopNum = "487168"
-        } else if currentStop == "Student Health Services" {
-            stopNum = "34999"
-        } else if currentStop == "Residents Hall" {
-            stopNum = "487168"
-        } else if currentStop == "Collins College/Kellog West (Southbound)" {
-            stopNum = "1231738"
-        } else if currentStop == "Agriscapes/Farm Store" {
-            stopNum = "487171"
-        } else if currentStop == "South Campus/Temple" {
-            stopNum = "36359"
-        } else if currentStop == "Collins College/Kellog West (Northbound)" {
-            stopNum = "485601"
-        } else if currentStop == "Collins College/Kellog West (Northbound)" {
-            stopNum = "485601"
-        } else if currentStop == "Univ. Police/Parking Services" {
-            stopNum = "487173"
-        } else if currentStop == "Parking Lot B" {
-            stopNum = "35317"
-        } else if currentStop == "PS2 Southeast" {
-            stopNum = "2310798"
-        } else if currentStop == "PS2 Northeast" {
-            stopNum = "2310799"
-        } else if currentStop == "Camphor Lane/Lot M" {
-            stopNum = "35348"
-        } else if currentStop == "Campus Center Marketplace" {
-            stopNum = "35362"
-        } else if currentStop == "Camphor Lane" {
-            stopNum = "35377"
-        } else if currentStop == "PS2 Northwest" {
-            stopNum = "2310800"
-        } else if currentStop == "PS2 Southwest" {
-            stopNum = "2310801"
-        } else if currentStop == "Regenerative Studies" {
-            stopNum = "487170"
-        }
+        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
         
-        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + stopNum + "/Arrivals?customerID=21"
-        
+        print(API_URL)
+        print(API_URL)
         print(API_URL)
         
         self.route.delegate = self
@@ -186,7 +183,7 @@ class ViewController: UIViewController {
                 //using the array to put values
                 self.shuttles = try decoder.decode([Shuttle].self, from: json!)
                 
-                //printing all the hero names
+                //printing all the bus names
                 /* for shuttle in self.shuttles{
                     print(shuttle.minutes)
                     print(shuttle.busName)
@@ -249,6 +246,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -282,19 +280,28 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             currentRoute = routeData[row]
         } else if pickerView == stop{
             if currentRoute == "Route A" {
-                currentStop = routeAData[row]
+                if let identifier = routeAStops[routeAData[row]] {
+                        currentStop = String(identifier)
+                }
+                
             }
                 
             else if currentRoute == "Route B" {
-                currentStop = routeBData[row]
+                if let identifier = routeBStops[routeBData[row]] {
+                    currentStop = String(identifier)
+                }
             }
                 
             else if currentRoute == "Route B2" {
-                currentStop = routeB2Data[row]
+                if let identifier = routeB2Stops[routeB2Data[row]] {
+                    currentStop = String(identifier)
+                }
             }
                 
             else if currentRoute == "Route C" {
-                currentStop = routeCData[row]
+                if let identifier = routeCStops[routeCData[row]] {
+                    currentStop = String(identifier)
+                }
             }
         }
     }
@@ -321,5 +328,9 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         return "Test"
     }
+    
+    
+    
+    
 }
 
