@@ -146,6 +146,7 @@ class ViewController: UIViewController {
     @IBOutlet var stop: UIPickerView!
     @IBOutlet weak var progress: UIProgressView!
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -162,13 +163,11 @@ class ViewController: UIViewController {
             routeNum = "4515"
         }
         
-        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
+        //let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + currentStop + "/Arrivals?customerID=21"
         
-        //let API_URL = "https://www.cpp.edu/~mrharris/demoJSON.json"
+        let API_URL = "https://www.cpp.edu/~mrharris/demoJSON.json"
         
-        print(API_URL)
-        print(API_URL)
-        print(API_URL)
+        print("Current URL: " + API_URL)
         
         self.route.delegate = self
         self.route.dataSource = self
@@ -185,9 +184,11 @@ class ViewController: UIViewController {
         """
             )
         }
+         
         
         arrivalMin.font = UIFontMetrics.default.scaledFont(for: customFont) */
-            
+        
+        
         self.eta.font = UIFont(name: "Lato-Light", size: 15.0)
         
         Alamofire.request(API_URL).responseJSON { response in
@@ -218,8 +219,8 @@ class ViewController: UIViewController {
                 self.progress.layer.cornerRadius = 5
                 self.progress.clipsToBounds = true
                
-                print(self.currentRoute)
-                print(self.currentStop)
+                print("Current Route: " + self.currentRoute)
+                print("Current Stop: " + self.currentStop)
                 
                 if self.shuttles.isEmpty == true {
                     print("There are no buses")
@@ -261,6 +262,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
+
+ 
+
+
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
