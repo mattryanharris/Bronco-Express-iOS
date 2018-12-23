@@ -54,7 +54,11 @@ struct Shuttle: Codable {
     }
 }
 
+
+
 class ViewController: UIViewController {
+   
+    
     
     
     var shuttles = [Shuttle]()
@@ -150,6 +154,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+       
     
         var routeNum = "3164"
         
@@ -353,9 +359,5 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         return "Test"
     }
-    
-    
-    
-    
 }
 
