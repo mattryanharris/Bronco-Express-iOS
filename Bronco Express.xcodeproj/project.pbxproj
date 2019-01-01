@@ -7,136 +7,150 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34401D2C21AFBCB3009DFA8C /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 34401D2B21AFBCB3009DFA8C /* fonts */; };
-		34401D2D21AFBE46009DFA8C /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 34401D2B21AFBCB3009DFA8C /* fonts */; };
-		3449785221AFF15E00F26E6B /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3449785121AFF15E00F26E6B /* Lato-Light.ttf */; };
-		3449785421AFF20B00F26E6B /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3449785321AFF20B00F26E6B /* Lato-Regular.ttf */; };
-		3449785621AFF24600F26E6B /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3449785521AFF24600F26E6B /* Lato-Bold.ttf */; };
-		3472835821AC9C0E008957CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3472835721AC9C0E008957CB /* AppDelegate.swift */; };
-		3472835A21AC9C0E008957CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3472835921AC9C0E008957CB /* ViewController.swift */; };
-		3472835D21AC9C0E008957CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3472835B21AC9C0E008957CB /* Main.storyboard */; };
-		3472835F21AC9C0E008957CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3472835E21AC9C0E008957CB /* Assets.xcassets */; };
-		3472836221AC9C0E008957CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3472836021AC9C0E008957CB /* LaunchScreen.storyboard */; };
-		3472836D21AC9C0F008957CB /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3472836C21AC9C0F008957CB /* TestAppUITests.swift */; };
-		75ACA9300EE79549EE2824BB /* Pods_TestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DBB30C2BF101A2BEEFBD6C /* Pods_TestAppUITests.framework */; };
-		8B4CB25321136F513F48AC94 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92BCBEDA6E25D78A0B5FBC /* Pods_TestApp.framework */; };
+		349F5F6621D84A4E007CA2D3 /* StopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6221D84A4D007CA2D3 /* StopTableController.swift */; };
+		349F5F6721D84A4E007CA2D3 /* RouteTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6321D84A4D007CA2D3 /* RouteTableController.swift */; };
+		349F5F6821D84A4E007CA2D3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6421D84A4D007CA2D3 /* Model.swift */; };
+		349F5F6921D84A4E007CA2D3 /* BusViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6521D84A4D007CA2D3 /* BusViewer.swift */; };
+		349FCD9B21D849B70001977B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FCD9A21D849B70001977B /* AppDelegate.swift */; };
+		349FCD9D21D849B70001977B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FCD9C21D849B70001977B /* ViewController.swift */; };
+		349FCDA021D849B70001977B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349FCD9E21D849B70001977B /* Main.storyboard */; };
+		349FCDA221D849B80001977B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349FCDA121D849B80001977B /* Assets.xcassets */; };
+		349FCDA521D849B80001977B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349FCDA321D849B80001977B /* LaunchScreen.storyboard */; };
+		349FCDB021D849B80001977B /* Bronco_ExpressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FCDAF21D849B80001977B /* Bronco_ExpressUITests.swift */; };
+		34E5F40021DAFFEF006FB858 /* UIProgressViewStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5F3FF21DAFFEF006FB858 /* UIProgressViewStyling.swift */; };
+		34E5F40621DB01E1006FB858 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34E5F40221DB01E0006FB858 /* Lato-Regular.ttf */; };
+		34E5F40721DB01E1006FB858 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34E5F40321DB01E0006FB858 /* Lato-Hairline.ttf */; };
+		34E5F40821DB01E1006FB858 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34E5F40421DB01E0006FB858 /* Lato-Light.ttf */; };
+		34E5F40921DB01E1006FB858 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34E5F40521DB01E0006FB858 /* Lato-Bold.ttf */; };
+		3776DD7E4A31B7727CC548E3 /* Pods_Bronco_ExpressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6956AF51B828226C1B54A6 /* Pods_Bronco_ExpressUITests.framework */; };
+		B1771A630F858B3FB838BCF4 /* Pods_Bronco_Express.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3345EE871A06B02A24FAD9AA /* Pods_Bronco_Express.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3472836921AC9C0F008957CB /* PBXContainerItemProxy */ = {
+		349FCDAC21D849B80001977B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3472834C21AC9C0E008957CB /* Project object */;
+			containerPortal = 349FCD8F21D849B70001977B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3472835321AC9C0E008957CB;
-			remoteInfo = TestApp;
+			remoteGlobalIDString = 349FCD9621D849B70001977B;
+			remoteInfo = "Bronco Express";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B578C6C10D9E626DF80A681 /* Pods-TestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAppUITests/Pods-TestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2B1CC20DE026D27EA727FA26 /* Pods-TestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestAppUITests/Pods-TestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		34401D2B21AFBCB3009DFA8C /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
-		3449785121AFF15E00F26E6B /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
-		3449785321AFF20B00F26E6B /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		3449785521AFF24600F26E6B /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		3472835421AC9C0E008957CB /* Bronco Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bronco Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3472835721AC9C0E008957CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3472835921AC9C0E008957CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
-		3472835C21AC9C0E008957CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3472835E21AC9C0E008957CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3472836121AC9C0E008957CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3472836321AC9C0E008957CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3472836821AC9C0F008957CB /* Bronco ExpressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bronco ExpressUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3472836C21AC9C0F008957CB /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
-		3472836E21AC9C0F008957CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D92BCBEDA6E25D78A0B5FBC /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66DBB30C2BF101A2BEEFBD6C /* Pods_TestAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		696CD0C7357EA0EF94DF81B8 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
-		E73D0F935BDFBB14093FA474 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		11C0E40F8DB7EC121F363435 /* Pods-Bronco ExpressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bronco ExpressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bronco ExpressUITests/Pods-Bronco ExpressUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		32E8CA87CDF9179F34C92E19 /* Pods-Bronco Express.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bronco Express.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bronco Express/Pods-Bronco Express.release.xcconfig"; sourceTree = "<group>"; };
+		3345EE871A06B02A24FAD9AA /* Pods_Bronco_Express.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bronco_Express.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		349F5F6221D84A4D007CA2D3 /* StopTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTableController.swift; sourceTree = "<group>"; };
+		349F5F6321D84A4D007CA2D3 /* RouteTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableController.swift; sourceTree = "<group>"; };
+		349F5F6421D84A4D007CA2D3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		349F5F6521D84A4D007CA2D3 /* BusViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusViewer.swift; sourceTree = "<group>"; };
+		349FCD9721D849B70001977B /* Bronco Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bronco Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		349FCD9A21D849B70001977B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		349FCD9C21D849B70001977B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		349FCD9F21D849B70001977B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		349FCDA121D849B80001977B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		349FCDA421D849B80001977B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		349FCDA621D849B80001977B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		349FCDAB21D849B80001977B /* Bronco ExpressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bronco ExpressUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		349FCDAF21D849B80001977B /* Bronco_ExpressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bronco_ExpressUITests.swift; sourceTree = "<group>"; };
+		349FCDB121D849B80001977B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E5F3FF21DAFFEF006FB858 /* UIProgressViewStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewStyling.swift; sourceTree = "<group>"; };
+		34E5F40221DB01E0006FB858 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		34E5F40321DB01E0006FB858 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		34E5F40421DB01E0006FB858 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		34E5F40521DB01E0006FB858 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		7B6956AF51B828226C1B54A6 /* Pods_Bronco_ExpressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bronco_ExpressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		986F4A5F413DF2BC8E1EE031 /* Pods-Bronco Express.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bronco Express.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bronco Express/Pods-Bronco Express.debug.xcconfig"; sourceTree = "<group>"; };
+		F703403678C0F211D1946539 /* Pods-Bronco ExpressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bronco ExpressUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bronco ExpressUITests/Pods-Bronco ExpressUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3472835121AC9C0E008957CB /* Frameworks */ = {
+		349FCD9421D849B70001977B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B4CB25321136F513F48AC94 /* Pods_TestApp.framework in Frameworks */,
+				B1771A630F858B3FB838BCF4 /* Pods_Bronco_Express.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3472836521AC9C0F008957CB /* Frameworks */ = {
+		349FCDA821D849B80001977B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75ACA9300EE79549EE2824BB /* Pods_TestAppUITests.framework in Frameworks */,
+				3776DD7E4A31B7727CC548E3 /* Pods_Bronco_ExpressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18BEC2A62888FDF6818702F4 /* Frameworks */ = {
+		349FCD8E21D849B70001977B = {
 			isa = PBXGroup;
 			children = (
-				5D92BCBEDA6E25D78A0B5FBC /* Pods_TestApp.framework */,
-				66DBB30C2BF101A2BEEFBD6C /* Pods_TestAppUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3472834B21AC9C0E008957CB = {
-			isa = PBXGroup;
-			children = (
-				3449785521AFF24600F26E6B /* Lato-Bold.ttf */,
-				3449785321AFF20B00F26E6B /* Lato-Regular.ttf */,
-				3449785121AFF15E00F26E6B /* Lato-Light.ttf */,
-				3472835621AC9C0E008957CB /* BroncoExpress */,
-				3472836B21AC9C0F008957CB /* BroncoExpressUITests */,
-				3472835521AC9C0E008957CB /* Products */,
-				EC752E2647DC899010994A88 /* Pods */,
-				18BEC2A62888FDF6818702F4 /* Frameworks */,
+				349FCD9921D849B70001977B /* Bronco Express */,
+				349FCDAE21D849B80001977B /* Bronco ExpressUITests */,
+				349FCD9821D849B70001977B /* Products */,
+				50DA9CB361EAA55E73A67A52 /* Pods */,
+				3AFD7040C91EEB529A5F8C11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		3472835521AC9C0E008957CB /* Products */ = {
+		349FCD9821D849B70001977B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3472835421AC9C0E008957CB /* Bronco Express.app */,
-				3472836821AC9C0F008957CB /* Bronco ExpressUITests.xctest */,
+				349FCD9721D849B70001977B /* Bronco Express.app */,
+				349FCDAB21D849B80001977B /* Bronco ExpressUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3472835621AC9C0E008957CB /* BroncoExpress */ = {
+		349FCD9921D849B70001977B /* Bronco Express */ = {
 			isa = PBXGroup;
 			children = (
-				3472835721AC9C0E008957CB /* AppDelegate.swift */,
-				3472835921AC9C0E008957CB /* ViewController.swift */,
-				3472835B21AC9C0E008957CB /* Main.storyboard */,
-				34401D2B21AFBCB3009DFA8C /* fonts */,
-				3472835E21AC9C0E008957CB /* Assets.xcassets */,
-				3472836021AC9C0E008957CB /* LaunchScreen.storyboard */,
-				3472836321AC9C0E008957CB /* Info.plist */,
+				34E5F40521DB01E0006FB858 /* Lato-Bold.ttf */,
+				34E5F40321DB01E0006FB858 /* Lato-Hairline.ttf */,
+				34E5F40421DB01E0006FB858 /* Lato-Light.ttf */,
+				34E5F40221DB01E0006FB858 /* Lato-Regular.ttf */,
+				349FCD9A21D849B70001977B /* AppDelegate.swift */,
+				349FCD9C21D849B70001977B /* ViewController.swift */,
+				349FCD9E21D849B70001977B /* Main.storyboard */,
+				349F5F6521D84A4D007CA2D3 /* BusViewer.swift */,
+				34E5F3FF21DAFFEF006FB858 /* UIProgressViewStyling.swift */,
+				349F5F6421D84A4D007CA2D3 /* Model.swift */,
+				349F5F6321D84A4D007CA2D3 /* RouteTableController.swift */,
+				349F5F6221D84A4D007CA2D3 /* StopTableController.swift */,
+				349FCDA121D849B80001977B /* Assets.xcassets */,
+				349FCDA321D849B80001977B /* LaunchScreen.storyboard */,
+				349FCDA621D849B80001977B /* Info.plist */,
 			);
-			path = BroncoExpress;
+			path = "Bronco Express";
 			sourceTree = "<group>";
 		};
-		3472836B21AC9C0F008957CB /* BroncoExpressUITests */ = {
+		349FCDAE21D849B80001977B /* Bronco ExpressUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3472836C21AC9C0F008957CB /* TestAppUITests.swift */,
-				3472836E21AC9C0F008957CB /* Info.plist */,
+				349FCDAF21D849B80001977B /* Bronco_ExpressUITests.swift */,
+				349FCDB121D849B80001977B /* Info.plist */,
 			);
-			path = BroncoExpressUITests;
+			path = "Bronco ExpressUITests";
 			sourceTree = "<group>";
 		};
-		EC752E2647DC899010994A88 /* Pods */ = {
+		3AFD7040C91EEB529A5F8C11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E73D0F935BDFBB14093FA474 /* Pods-TestApp.debug.xcconfig */,
-				696CD0C7357EA0EF94DF81B8 /* Pods-TestApp.release.xcconfig */,
-				2B1CC20DE026D27EA727FA26 /* Pods-TestAppUITests.debug.xcconfig */,
-				0B578C6C10D9E626DF80A681 /* Pods-TestAppUITests.release.xcconfig */,
+				3345EE871A06B02A24FAD9AA /* Pods_Bronco_Express.framework */,
+				7B6956AF51B828226C1B54A6 /* Pods_Bronco_ExpressUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50DA9CB361EAA55E73A67A52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				986F4A5F413DF2BC8E1EE031 /* Pods-Bronco Express.debug.xcconfig */,
+				32E8CA87CDF9179F34C92E19 /* Pods-Bronco Express.release.xcconfig */,
+				11C0E40F8DB7EC121F363435 /* Pods-Bronco ExpressUITests.debug.xcconfig */,
+				F703403678C0F211D1946539 /* Pods-Bronco ExpressUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -144,64 +158,69 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3472835321AC9C0E008957CB /* Bronco Express */ = {
+		349FCD9621D849B70001977B /* Bronco Express */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3472837121AC9C0F008957CB /* Build configuration list for PBXNativeTarget "Bronco Express" */;
+			buildConfigurationList = 349FCDB421D849B80001977B /* Build configuration list for PBXNativeTarget "Bronco Express" */;
 			buildPhases = (
-				75622D87B8DB55017A1CE377 /* [CP] Check Pods Manifest.lock */,
-				3472835021AC9C0E008957CB /* Sources */,
-				3472835121AC9C0E008957CB /* Frameworks */,
-				3472835221AC9C0E008957CB /* Resources */,
-				2539AC2DA169187CDC6EF31F /* [CP] Embed Pods Frameworks */,
+				D051917196BC092F267CE83E /* [CP] Check Pods Manifest.lock */,
+				349FCD9321D849B70001977B /* Sources */,
+				349FCD9421D849B70001977B /* Frameworks */,
+				349FCD9521D849B70001977B /* Resources */,
+				15E9AFAD92AFE247F02AD32A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Bronco Express";
-			productName = TestApp;
-			productReference = 3472835421AC9C0E008957CB /* Bronco Express.app */;
+			productName = "Bronco Express";
+			productReference = 349FCD9721D849B70001977B /* Bronco Express.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3472836721AC9C0F008957CB /* Bronco ExpressUITests */ = {
+		349FCDAA21D849B80001977B /* Bronco ExpressUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3472837421AC9C0F008957CB /* Build configuration list for PBXNativeTarget "Bronco ExpressUITests" */;
+			buildConfigurationList = 349FCDB721D849B80001977B /* Build configuration list for PBXNativeTarget "Bronco ExpressUITests" */;
 			buildPhases = (
-				CF609AF9F9DD636E0F7F72F3 /* [CP] Check Pods Manifest.lock */,
-				3472836421AC9C0F008957CB /* Sources */,
-				3472836521AC9C0F008957CB /* Frameworks */,
-				3472836621AC9C0F008957CB /* Resources */,
+				AB4FD154BB5B2A3E08D6CB61 /* [CP] Check Pods Manifest.lock */,
+				349FCDA721D849B80001977B /* Sources */,
+				349FCDA821D849B80001977B /* Frameworks */,
+				349FCDA921D849B80001977B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3472836A21AC9C0F008957CB /* PBXTargetDependency */,
+				349FCDAD21D849B80001977B /* PBXTargetDependency */,
 			);
 			name = "Bronco ExpressUITests";
-			productName = TestAppUITests;
-			productReference = 3472836821AC9C0F008957CB /* Bronco ExpressUITests.xctest */;
+			productName = "Bronco ExpressUITests";
+			productReference = 349FCDAB21D849B80001977B /* Bronco ExpressUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3472834C21AC9C0E008957CB /* Project object */ = {
+		349FCD8F21D849B70001977B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Matthew Harris";
 				TargetAttributes = {
-					3472835321AC9C0E008957CB = {
+					349FCD9621D849B70001977B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
-					3472836721AC9C0F008957CB = {
+					349FCDAA21D849B80001977B = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 3472835321AC9C0E008957CB;
+						TestTargetID = 349FCD9621D849B70001977B;
 					};
 				};
 			};
-			buildConfigurationList = 3472834F21AC9C0E008957CB /* Build configuration list for PBXProject "Bronco Express" */;
+			buildConfigurationList = 349FCD9221D849B70001977B /* Build configuration list for PBXProject "Bronco Express" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,44 +228,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 3472834B21AC9C0E008957CB;
-			productRefGroup = 3472835521AC9C0E008957CB /* Products */;
+			mainGroup = 349FCD8E21D849B70001977B;
+			productRefGroup = 349FCD9821D849B70001977B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3472835321AC9C0E008957CB /* Bronco Express */,
-				3472836721AC9C0F008957CB /* Bronco ExpressUITests */,
+				349FCD9621D849B70001977B /* Bronco Express */,
+				349FCDAA21D849B80001977B /* Bronco ExpressUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3472835221AC9C0E008957CB /* Resources */ = {
+		349FCD9521D849B70001977B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3449785621AFF24600F26E6B /* Lato-Bold.ttf in Resources */,
-				3449785421AFF20B00F26E6B /* Lato-Regular.ttf in Resources */,
-				3449785221AFF15E00F26E6B /* Lato-Light.ttf in Resources */,
-				3472836221AC9C0E008957CB /* LaunchScreen.storyboard in Resources */,
-				3472835F21AC9C0E008957CB /* Assets.xcassets in Resources */,
-				3472835D21AC9C0E008957CB /* Main.storyboard in Resources */,
-				34401D2C21AFBCB3009DFA8C /* fonts in Resources */,
+				34E5F40921DB01E1006FB858 /* Lato-Bold.ttf in Resources */,
+				349FCDA521D849B80001977B /* LaunchScreen.storyboard in Resources */,
+				34E5F40721DB01E1006FB858 /* Lato-Hairline.ttf in Resources */,
+				349FCDA221D849B80001977B /* Assets.xcassets in Resources */,
+				34E5F40821DB01E1006FB858 /* Lato-Light.ttf in Resources */,
+				349FCDA021D849B70001977B /* Main.storyboard in Resources */,
+				34E5F40621DB01E1006FB858 /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3472836621AC9C0F008957CB /* Resources */ = {
+		349FCDA921D849B80001977B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34401D2D21AFBE46009DFA8C /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2539AC2DA169187CDC6EF31F /* [CP] Embed Pods Frameworks */ = {
+		15E9AFAD92AFE247F02AD32A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,7 +272,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bronco Express/Pods-Bronco Express-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -265,10 +283,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp/Pods-TestApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bronco Express/Pods-Bronco Express-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75622D87B8DB55017A1CE377 /* [CP] Check Pods Manifest.lock */ = {
+		AB4FD154BB5B2A3E08D6CB61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,14 +301,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bronco ExpressUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF609AF9F9DD636E0F7F72F3 /* [CP] Check Pods Manifest.lock */ = {
+		D051917196BC092F267CE83E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,7 +323,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestAppUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bronco Express-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -315,46 +333,51 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3472835021AC9C0E008957CB /* Sources */ = {
+		349FCD9321D849B70001977B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3472835A21AC9C0E008957CB /* ViewController.swift in Sources */,
-				3472835821AC9C0E008957CB /* AppDelegate.swift in Sources */,
+				349F5F6821D84A4E007CA2D3 /* Model.swift in Sources */,
+				349F5F6721D84A4E007CA2D3 /* RouteTableController.swift in Sources */,
+				349FCD9D21D849B70001977B /* ViewController.swift in Sources */,
+				34E5F40021DAFFEF006FB858 /* UIProgressViewStyling.swift in Sources */,
+				349F5F6621D84A4E007CA2D3 /* StopTableController.swift in Sources */,
+				349F5F6921D84A4E007CA2D3 /* BusViewer.swift in Sources */,
+				349FCD9B21D849B70001977B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3472836421AC9C0F008957CB /* Sources */ = {
+		349FCDA721D849B80001977B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3472836D21AC9C0F008957CB /* TestAppUITests.swift in Sources */,
+				349FCDB021D849B80001977B /* Bronco_ExpressUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3472836A21AC9C0F008957CB /* PBXTargetDependency */ = {
+		349FCDAD21D849B80001977B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3472835321AC9C0E008957CB /* Bronco Express */;
-			targetProxy = 3472836921AC9C0F008957CB /* PBXContainerItemProxy */;
+			target = 349FCD9621D849B70001977B /* Bronco Express */;
+			targetProxy = 349FCDAC21D849B80001977B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3472835B21AC9C0E008957CB /* Main.storyboard */ = {
+		349FCD9E21D849B70001977B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3472835C21AC9C0E008957CB /* Base */,
+				349FCD9F21D849B70001977B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3472836021AC9C0E008957CB /* LaunchScreen.storyboard */ = {
+		349FCDA321D849B80001977B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3472836121AC9C0E008957CB /* Base */,
+				349FCDA421D849B80001977B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -362,7 +385,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3472836F21AC9C0F008957CB /* Debug */ = {
+		349FCDB221D849B80001977B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -423,7 +446,7 @@
 			};
 			name = Debug;
 		};
-		3472837021AC9C0F008957CB /* Release */ = {
+		349FCDB321D849B80001977B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -478,117 +501,117 @@
 			};
 			name = Release;
 		};
-		3472837221AC9C0F008957CB /* Debug */ = {
+		349FCDB521D849B80001977B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E73D0F935BDFBB14093FA474 /* Pods-TestApp.debug.xcconfig */;
+			baseConfigurationReference = 986F4A5F413DF2BC8E1EE031 /* Pods-Bronco Express.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB5AZ7SPQY;
-				INFOPLIST_FILE = "$(SRCROOT)/BroncoExpress/Info.plist";
+				INFOPLIST_FILE = "Bronco Express/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = matthewharris.TestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "matthewharris.Bronco-Express";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		3472837321AC9C0F008957CB /* Release */ = {
+		349FCDB621D849B80001977B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 696CD0C7357EA0EF94DF81B8 /* Pods-TestApp.release.xcconfig */;
+			baseConfigurationReference = 32E8CA87CDF9179F34C92E19 /* Pods-Bronco Express.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB5AZ7SPQY;
-				INFOPLIST_FILE = "$(SRCROOT)/BroncoExpress/Info.plist";
+				INFOPLIST_FILE = "Bronco Express/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = matthewharris.TestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "matthewharris.Bronco-Express";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		3472837521AC9C0F008957CB /* Debug */ = {
+		349FCDB821D849B80001977B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B1CC20DE026D27EA727FA26 /* Pods-TestAppUITests.debug.xcconfig */;
+			baseConfigurationReference = 11C0E40F8DB7EC121F363435 /* Pods-Bronco ExpressUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB5AZ7SPQY;
-				INFOPLIST_FILE = TestAppUITests/Info.plist;
+				INFOPLIST_FILE = "Bronco ExpressUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = matthewharris.TestAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "matthewharris.Bronco-ExpressUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestApp;
+				TEST_TARGET_NAME = "Bronco Express";
 			};
 			name = Debug;
 		};
-		3472837621AC9C0F008957CB /* Release */ = {
+		349FCDB921D849B80001977B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B578C6C10D9E626DF80A681 /* Pods-TestAppUITests.release.xcconfig */;
+			baseConfigurationReference = F703403678C0F211D1946539 /* Pods-Bronco ExpressUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XB5AZ7SPQY;
-				INFOPLIST_FILE = TestAppUITests/Info.plist;
+				INFOPLIST_FILE = "Bronco ExpressUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = matthewharris.TestAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "matthewharris.Bronco-ExpressUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestApp;
+				TEST_TARGET_NAME = "Bronco Express";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3472834F21AC9C0E008957CB /* Build configuration list for PBXProject "Bronco Express" */ = {
+		349FCD9221D849B70001977B /* Build configuration list for PBXProject "Bronco Express" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3472836F21AC9C0F008957CB /* Debug */,
-				3472837021AC9C0F008957CB /* Release */,
+				349FCDB221D849B80001977B /* Debug */,
+				349FCDB321D849B80001977B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3472837121AC9C0F008957CB /* Build configuration list for PBXNativeTarget "Bronco Express" */ = {
+		349FCDB421D849B80001977B /* Build configuration list for PBXNativeTarget "Bronco Express" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3472837221AC9C0F008957CB /* Debug */,
-				3472837321AC9C0F008957CB /* Release */,
+				349FCDB521D849B80001977B /* Debug */,
+				349FCDB621D849B80001977B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3472837421AC9C0F008957CB /* Build configuration list for PBXNativeTarget "Bronco ExpressUITests" */ = {
+		349FCDB721D849B80001977B /* Build configuration list for PBXNativeTarget "Bronco ExpressUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3472837521AC9C0F008957CB /* Debug */,
-				3472837621AC9C0F008957CB /* Release */,
+				349FCDB821D849B80001977B /* Debug */,
+				349FCDB921D849B80001977B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3472834C21AC9C0E008957CB /* Project object */;
+	rootObject = 349FCD8F21D849B70001977B /* Project object */;
 }

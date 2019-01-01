@@ -1,0 +1,6 @@
+framework module Pods_Bronco_ExpressUITests {
+  umbrella header "Pods-Bronco ExpressUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
