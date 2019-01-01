@@ -1,21 +1,11 @@
-//
-//  RouteTableController.swift
-//  TestTest
-//
-//  Created by Matthew Harris on 12/29/18.
-//  Copyright © 2018 Matthew Harris. All rights reserved.
-//
-
 import UIKit
 
 class RouteTableController: UITableViewController {
     
     let route = Route.routes
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = "Route"
     }
     
@@ -32,19 +22,23 @@ class RouteTableController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Segue" {
-            guard let StopTableController = segue.destination as? StopTableController else {return}
+            guard let StopTableController = segue.destination as? StopTableController else {
+                return
+            }
             
-            guard let cell = sender as? UITableViewCell else { return }
+            guard let cell = sender as? UITableViewCell else {
+                return
+            }
             
             currentRoute = (cell.textLabel?.text)!
             
-            guard let indexPath = tableView.indexPath(for: cell) else { return }
-            
-            
+            guard let indexPath = tableView.indexPath(for: cell) else {
+                return
+            }
             
             let routes = route[indexPath.row]
-            StopTableController.route = routes
             
+            StopTableController.route = routes
         }
     }
 }

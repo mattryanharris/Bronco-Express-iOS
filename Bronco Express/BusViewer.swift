@@ -1,11 +1,3 @@
-//
-//  BusViewer.swift
-//  TestTest
-//
-//  Created by Matthew Harris on 12/29/18.
-//  Copyright © 2018 Matthew Harris. All rights reserved.
-//
-
 import UIKit
 import Alamofire
 import Foundation
@@ -63,21 +55,16 @@ class BusViewer: UIViewController {
     @IBOutlet var eta: UILabel!
     @IBOutlet weak var progress: UIProgressView!
     
-    
     var shuttles = [Shuttle]()
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+  
         RouteName.setTitle(currentRoute, for: UIControl.State.normal)
         stopName.setTitle(currentStop, for: UIControl.State.normal)
         
         var routeNum = "3164"
-        
-        
+    
         if currentRoute == "Route A" {
             routeNum = "3164"
         } else if currentRoute == "Route B" {
@@ -88,46 +75,21 @@ class BusViewer: UIViewController {
             routeNum = "4515"
         }
         
-        print(routeNum)
-        
-        
-        //let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + String(currentStopID)  + "/Arrivals?customerID=21"
-        
         URLCache.shared.removeAllCachedResponses()
-        
-        let API_URL = "https://www.cpp.edu/~mrharris/" + routeNum + String(currentStopID) + ".json"
-        
-        print(API_URL)
 
-        //let API_URL = "https://www.cpp.edu/~mrharris/demoJSON.json"
-        
+        let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + String(currentStopID)  + "/Arrivals?customerID=21"
         
         AF.request(API_URL).responseJSON { response in
+           
             let json = response.data
             
-            do{
-                //created the json decoder
+            do {
                 let decoder = JSONDecoder()
                 
-                //using the array to put values
                 self.shuttles = try decoder.decode([Shuttle].self, from: json!)
                 
-                //printing all the bus names
-                /* for shuttle in self.shuttles{
-                 print(shuttle.minutes)
-                 print(shuttle.busName)
-                 self.busID.text = shuttle.busName
-                 self.arrivalMin.text = String(shuttle.minutes)
-                 }
-                 */
-                
-                
-            
-                
                 self.progress.trackTintColor = #colorLiteral(red: 0.8900991082, green: 0.8902519345, blue: 0.8900894523, alpha: 1)
-                
-                self.progress.progressTintColor = #colorLiteral(red: 0, green: 0.7798785567, blue: 0, alpha: 1)
-                
+                self.progress.progressTintColor = #colorLiteral(red: 0.002084276134, green: 0.7340346481, blue: 0.003233944196, alpha: 1)
                 self.progress.layer.cornerRadius = 5
                 self.progress.clipsToBounds = true
                 
@@ -164,20 +126,15 @@ class BusViewer: UIViewController {
         }
     }
     
-    
     @IBAction func refresh(_ sender: Any) {
         viewDidLoad()
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DirectSegue" {
             guard segue.destination is StopTableController else {return}
-            
             guard let cell = sender as? UITableViewCell else { return }
-            
             currentRoute = (cell.textLabel?.text)!
         }
-}
-
+    }
 }

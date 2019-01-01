@@ -1,11 +1,3 @@
-//
-//  Model.swift
-//  TestTest
-//
-//  Created by Matthew Harris on 12/29/18.
-//  Copyright © 2018 Matthew Harris. All rights reserved.
-//
-
 import Foundation
 
 struct Route {
@@ -31,8 +23,8 @@ struct Route {
             Stop(stopName: "Resident Halls", stopID: 486772),
             Stop(stopName: "Building 1", stopID: 486773),
             Stop(stopName: "Student Health Services", stopID: 34999)
-
             ]),
+        
         Route(routeName: "Route B", routeID: 4512, stop: [
             Stop(stopName: "Interim Design Center Building 89", stopID: 487167),
             Stop(stopName: "Oak Lane/F Lots", stopID: 485416),
@@ -78,9 +70,8 @@ struct Route {
             Stop(stopName: "PS2 Northwest", stopID: 2310800),
             Stop(stopName: "PS2 Southwest", stopID: 2310801)
             ])
-    ]
-}
-
+        ]
+    }
 
 var currentRoute = "Route A"
 var currentStop = "South Campus/Temple"
@@ -89,5 +80,4 @@ var currentStopID = 36359
 struct Stop {
     let stopName: String
     let stopID: Int
-    
 }

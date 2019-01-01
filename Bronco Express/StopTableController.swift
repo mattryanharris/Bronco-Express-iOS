@@ -1,15 +1,6 @@
-//
-//  StopTableController.swift
-//  TestTest
-//
-//  Created by Matthew Harris on 12/29/18.
-//  Copyright © 2018 Matthew Harris. All rights reserved.
-//
-
 import UIKit
 
 class StopTableController: UITableViewController {
-    
     var route: Route! {
         didSet {
             navigationItem.title = route.routeName
@@ -34,7 +25,6 @@ class StopTableController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FinalSegue" {
-            
             guard let cell = sender as? UITableViewCell else { return }
             
             var i = 0
@@ -45,6 +35,5 @@ class StopTableController: UITableViewController {
             }
             currentStopID = route.stop[i].stopID
         }
-    
     }
 }
