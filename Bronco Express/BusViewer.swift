@@ -95,7 +95,9 @@ class BusViewer: UIViewController {
                 
                 if self.shuttles.isEmpty == true {
                     print("There are no buses")
-                    self.busID.text = String("There are no active buses")
+                    self.busID.text = String("No Active Buses")
+                    self.arrivalMin.text = "Try refreshing, nothing active."
+                    self.eta.text = "TBD"
                 }
                     
                     
