@@ -63,7 +63,6 @@ class BusViewer: UIViewController {
         let minFormat = DateFormatter()
         let dayFormat = DateFormatter()
         
-        
         hourFormat.dateFormat = "HH"
         minFormat.dateFormat = "mm"
         dayFormat.dateFormat = "EEEE"
@@ -72,15 +71,9 @@ class BusViewer: UIViewController {
         let hour = hourFormat.string(from: Date())
         let min = minFormat.string(from: Date())
         
-        print(day)
-        print(hour + ":" + min)
-        
         if (day == "Monday" || day == "Tuesday" || day == "Wednesday" || day == "Thursday") {
             if (Int(hour)! >= 22 && Int(min)! >= 30) && (Int(hour)! <= 7 && Int(hour)! < 30) {
                 showImageDialog()
-                print("Not In Service")
-            } else {
-                print("Normal Operating Hours")
             }
         }
         
@@ -88,36 +81,24 @@ class BusViewer: UIViewController {
                 if (Int(hour)! >= 17 && Int(min)! >= 30) && (Int(hour)! <= 7 && Int(hour)! < 30) {
                     showImageDialog()
                 }
-                else {
-                    print("Normal Operating Hours")
-            }
         }
         
         else {
             showImageDialog()
-            print("Weekend Time")
         }
     }
     
     func showImageDialog(animated: Bool = true) {
-        
-        // Prepare the popup assets
         let title = "NOT AT SERVICE AT THIS TIME"
         let message = "It is passed the normal operating hours, no active buses are running at this time."
         let image = UIImage(named: "night")
         
-        // Create the dialog
         let popup = PopupDialog(title: title, message: message, image: image, preferredWidth: 580)
     
+        let button = DefaultButton(title: "OK") {}
         
-        // Create second button
-        let buttonThree = DefaultButton(title: "OK") {
-        }
+        popup.addButtons([button])
         
-        // Add buttons to dialog
-        popup.addButtons([buttonThree])
-        
-        // Present dialog
         self.present(popup, animated: animated, completion: nil)
     }
     
@@ -140,7 +121,6 @@ class BusViewer: UIViewController {
         } else if currentRoute == "Route C" {
             routeNum = "4515"
         }
-        
         
         URLCache.shared.removeAllCachedResponses()
 
