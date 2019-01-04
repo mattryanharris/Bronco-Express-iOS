@@ -7,6 +7,7 @@ target 'Bronco Express' do
 
   # Pods for Bronco Express
   	pod 'Alamofire', '~> 5.0.0.beta.1'
+  	pod 'PopupDialog', '~> 0.9'
 
   target 'Bronco ExpressUITests' do
     inherit! :search_paths

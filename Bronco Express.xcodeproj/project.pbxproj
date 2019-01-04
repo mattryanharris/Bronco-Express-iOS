@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3453DABE21DEF16F0033F5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3453DABD21DEF16F0033F5F7 /* Assets.xcassets */; };
 		349F5F6621D84A4E007CA2D3 /* StopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6221D84A4D007CA2D3 /* StopTableController.swift */; };
 		349F5F6721D84A4E007CA2D3 /* RouteTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6321D84A4D007CA2D3 /* RouteTableController.swift */; };
 		349F5F6821D84A4E007CA2D3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F5F6421D84A4D007CA2D3 /* Model.swift */; };
@@ -14,7 +15,6 @@
 		349FCD9B21D849B70001977B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FCD9A21D849B70001977B /* AppDelegate.swift */; };
 		349FCD9D21D849B70001977B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FCD9C21D849B70001977B /* ViewController.swift */; };
 		349FCDA021D849B70001977B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349FCD9E21D849B70001977B /* Main.storyboard */; };
-		349FCDA221D849B80001977B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 349FCDA121D849B80001977B /* Assets.xcassets */; };
 		349FCDA521D849B80001977B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349FCDA321D849B80001977B /* LaunchScreen.storyboard */; };
 		349FCDB021D849B80001977B /* Bronco_ExpressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FCDAF21D849B80001977B /* Bronco_ExpressUITests.swift */; };
 		34E5F40021DAFFEF006FB858 /* UIProgressViewStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5F3FF21DAFFEF006FB858 /* UIProgressViewStyling.swift */; };
@@ -40,6 +40,7 @@
 		11C0E40F8DB7EC121F363435 /* Pods-Bronco ExpressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bronco ExpressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bronco ExpressUITests/Pods-Bronco ExpressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		32E8CA87CDF9179F34C92E19 /* Pods-Bronco Express.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bronco Express.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bronco Express/Pods-Bronco Express.release.xcconfig"; sourceTree = "<group>"; };
 		3345EE871A06B02A24FAD9AA /* Pods_Bronco_Express.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bronco_Express.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3453DABD21DEF16F0033F5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		349F5F6221D84A4D007CA2D3 /* StopTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopTableController.swift; sourceTree = "<group>"; };
 		349F5F6321D84A4D007CA2D3 /* RouteTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableController.swift; sourceTree = "<group>"; };
 		349F5F6421D84A4D007CA2D3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		349FCD9A21D849B70001977B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349FCD9C21D849B70001977B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		349FCD9F21D849B70001977B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		349FCDA121D849B80001977B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		349FCDA421D849B80001977B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		349FCDA621D849B80001977B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		349FCDAB21D849B80001977B /* Bronco ExpressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bronco ExpressUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +119,8 @@
 				349F5F6421D84A4D007CA2D3 /* Model.swift */,
 				349F5F6321D84A4D007CA2D3 /* RouteTableController.swift */,
 				349F5F6221D84A4D007CA2D3 /* StopTableController.swift */,
-				349FCDA121D849B80001977B /* Assets.xcassets */,
 				349FCDA321D849B80001977B /* LaunchScreen.storyboard */,
+				3453DABD21DEF16F0033F5F7 /* Assets.xcassets */,
 				349FCDA621D849B80001977B /* Info.plist */,
 			);
 			path = "Bronco Express";
@@ -247,8 +247,8 @@
 				34E5F40921DB01E1006FB858 /* Lato-Bold.ttf in Resources */,
 				349FCDA521D849B80001977B /* LaunchScreen.storyboard in Resources */,
 				34E5F40721DB01E1006FB858 /* Lato-Hairline.ttf in Resources */,
-				349FCDA221D849B80001977B /* Assets.xcassets in Resources */,
 				34E5F40821DB01E1006FB858 /* Lato-Light.ttf in Resources */,
+				3453DABE21DEF16F0033F5F7 /* Assets.xcassets in Resources */,
 				349FCDA021D849B70001977B /* Main.storyboard in Resources */,
 				34E5F40621DB01E1006FB858 /* Lato-Regular.ttf in Resources */,
 			);
@@ -274,12 +274,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bronco Express/Pods-Bronco Express-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
