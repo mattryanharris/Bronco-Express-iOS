@@ -71,16 +71,27 @@ class BusViewer: UIViewController {
         let hour = hourFormat.string(from: Date())
         let min = minFormat.string(from: Date())
         
+        print(hour)
+        
         if (day == "Monday" || day == "Tuesday" || day == "Wednesday" || day == "Thursday") {
-            if (Int(hour)! >= 22 && Int(min)! >= 30) && (Int(hour)! <= 7 && Int(hour)! < 30) {
+            if (Int(hour)! >= 23) || (Int(hour)! <= 6) {
+                showImageDialog()
+                print("Test")
+            }
+            
+            if(Int(hour)! == 22 && Int(min)! >= 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
                 showImageDialog()
             }
         }
         
         else if (day == "Friday") {
-                if (Int(hour)! >= 17 && Int(min)! >= 30) && (Int(hour)! <= 7 && Int(hour)! < 30) {
+                if (Int(hour)! >= 17) || (Int(hour)! <= 7) {
                     showImageDialog()
                 }
+            
+            if(Int(hour)! == 16 && Int(min)! >= 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
+                showImageDialog()
+            }
         }
         
         else {
@@ -90,7 +101,7 @@ class BusViewer: UIViewController {
     
     func showImageDialog(animated: Bool = true) {
         let title = "NOT AT SERVICE AT THIS TIME"
-        let message = "It is passed the normal operating hours, no active buses are running at this time."
+        let message = "It is passed  normal operating hours, no active buses are running at this time."
         let image = UIImage(named: "night")
         
         let popup = PopupDialog(title: title, message: message, image: image, preferredWidth: 580)
