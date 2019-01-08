@@ -50,14 +50,13 @@ struct Shuttle: Codable {
 class BusViewer: UIViewController {
     @IBOutlet weak var RouteName: UIButton!
     @IBOutlet weak var stopName: UIButton!
-    
     @IBOutlet weak var busID: UILabel!
     @IBOutlet weak var arrivalMin: UILabel!
     @IBOutlet var eta: UILabel!
     @IBOutlet weak var progress: UIProgressView!
     
     var shuttles = [Shuttle]()
-    
+
     func getCurrentTime() {
         let hourFormat = DateFormatter()
         let minFormat = DateFormatter()
@@ -74,34 +73,33 @@ class BusViewer: UIViewController {
         print(hour)
         
         if (day == "Monday" || day == "Tuesday" || day == "Wednesday" || day == "Thursday") {
-            if (Int(hour)! >= 23) || (Int(hour)! <= 6) {
+            if (Int(hour)! >= 19) || (Int(hour)! <= 6) {
                 showImageDialog()
-                print("Test")
             }
             
             if(Int(hour)! == 22 && Int(min)! >= 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
                 showImageDialog()
             }
         }
-        
+            
         else if (day == "Friday") {
-                if (Int(hour)! >= 17) || (Int(hour)! <= 7) {
-                    showImageDialog()
-                }
+            if (Int(hour)! >= 17) || (Int(hour)! <= 7) {
+                showImageDialog()
+            }
             
             if(Int(hour)! == 16 && Int(min)! >= 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
                 showImageDialog()
             }
         }
-        
+            
         else {
             showImageDialog()
         }
     }
     
     func showImageDialog(animated: Bool = true) {
-        let title = "NOT AT SERVICE AT THIS TIME"
-        let message = "It is passed  normal operating hours, no active buses are running at this time."
+        let title = "Not In Service At This Time"
+        let message = "It is passed normal operating hours, no active buses are running at this time."
         let image = UIImage(named: "night")
         
         let popup = PopupDialog(title: title, message: message, image: image, preferredWidth: 580)
@@ -136,7 +134,7 @@ class BusViewer: UIViewController {
         URLCache.shared.removeAllCachedResponses()
 
         let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + String(currentStopID)  + "/Arrivals?customerID=21"
-        
+    
         AF.request(API_URL).responseJSON { response in
            
             let json = response.data
@@ -191,7 +189,7 @@ class BusViewer: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DirectSegue" {
-            guard segue.destination is StopTableController else {return}
+            guard segue.destination is StopTableController else { return }
             guard let cell = sender as? UITableViewCell else { return }
             currentRoute = (cell.textLabel?.text)!
         }
