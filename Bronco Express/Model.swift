@@ -13,7 +13,7 @@ struct Route {
             Stop(stopName: "Camphor Lane/Lot M", stopID: 35348),
             Stop(stopName: "Campus Center Market", stopID: 35362),
             Stop(stopName: "Camphor Lane", stopID: 35377),
-            Stop(stopName: "Building 7 - Enviormental Design", stopID: 48396),
+            Stop(stopName: "Building 7 - Environmental Design", stopID: 48396),
             Stop(stopName: "Building 94", stopID: 33803),
             Stop(stopName: "Rose Garden", stopID: 33817),
             Stop(stopName: "Building 91", stopID: 33835),
@@ -36,7 +36,7 @@ struct Route {
             Stop(stopName: "Agriscapes/Farm Store", stopID: 487171),
             Stop(stopName: "South Campus/Temple", stopID: 36359),
             Stop(stopName: "Collins College/Kellogg West (Northbound)", stopID: 485601),
-            Stop(stopName: "Building 7 - Enviormental Science", stopID: 48396),
+            Stop(stopName: "Building 7 - Environmental Design", stopID: 48396),
             Stop(stopName: "Building 94", stopID: 33803),
             Stop(stopName: "Rose Garden/College of Business", stopID: 487172),
             Stop(stopName: "University Police/Parking Services", stopID: 487173)
@@ -54,7 +54,7 @@ struct Route {
             Stop(stopName: "Agriscapes/Farm Store", stopID: 487171),
             Stop(stopName: "South Campus/Temple", stopID: 36359),
             Stop(stopName: "Collins College/Kellogg West (Northbound)", stopID: 485601),
-            Stop(stopName: "Building 7 - Enviormental Design", stopID: 48396),
+            Stop(stopName: "Building 7 - Environmental Design", stopID: 48396),
             Stop(stopName: "Building 94", stopID: 33803),
             Stop(stopName: "Rose Garden/College of Business", stopID: 487172),
             Stop(stopName: "University Police/Parking Services", stopID: 487173)
