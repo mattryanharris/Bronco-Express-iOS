@@ -73,11 +73,11 @@ class BusViewer: UIViewController {
         print(hour)
         
         if (day == "Monday" || day == "Tuesday" || day == "Wednesday" || day == "Thursday") {
-            if (Int(hour)! >= 19) || (Int(hour)! <= 6) {
+            if (Int(hour)! >= 22) || (Int(hour)! <= 6) {
                 showImageDialog()
             }
             
-            if(Int(hour)! == 22 && Int(min)! >= 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
+            if(Int(hour)! == 22 && Int(min)! > 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
                 showImageDialog()
             }
         }
@@ -87,7 +87,7 @@ class BusViewer: UIViewController {
                 showImageDialog()
             }
             
-            if(Int(hour)! == 16 && Int(min)! >= 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
+            if(Int(hour)! == 16 && Int(min)! > 30) || (Int(hour)! == 7 && Int(min)! <= 30) {
                 showImageDialog()
             }
         }
@@ -99,7 +99,7 @@ class BusViewer: UIViewController {
     
     func showImageDialog(animated: Bool = true) {
         let title = "Not In Service At This Time"
-        let message = "It is passed normal operating hours, no active buses are running at this time."
+        let message = "It is past normal operating hours, no active buses are running at this time."
         let image = UIImage(named: "night")
         
         let popup = PopupDialog(title: title, message: message, image: image, preferredWidth: 580)
@@ -194,4 +194,6 @@ class BusViewer: UIViewController {
             currentRoute = (cell.textLabel?.text)!
         }
     }
+    
+    
 }
