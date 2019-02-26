@@ -42,7 +42,7 @@ struct Route {
             Stop(stopName: "University Police/Parking Services", stopID: 487173)
             ]),
         
-        Route(routeName: "Route B2", routeID: 4513, stop: [
+        Route(routeName: "Route B2 via Lyle Ctr", routeID: 4513, stop: [
             Stop(stopName: "Interim Design Center Building 89", stopID: 487167),
             Stop(stopName: "Oak Lane/F Lots", stopID: 485416),
             Stop(stopName: "Cypress Lane/F Lots", stopID: 487168),
@@ -69,6 +69,12 @@ struct Route {
             Stop(stopName: "Camphor Lane", stopID: 35377),
             Stop(stopName: "PS2 Northwest", stopID: 2310800),
             Stop(stopName: "PS2 Southwest", stopID: 2310801)
+            ]),
+        
+        Route(routeName: "Route D Express", routeID: 11512, stop: [
+            Stop(stopName: "Student Services Building", stopID: 4599886),
+            Stop(stopName: "Innovation SCE", stopID: 4599887),
+            Stop(stopName: "Innovation Way at IBW", stopID: 1592165)
             ])
         ]
     }

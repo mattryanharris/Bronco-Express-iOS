@@ -125,16 +125,18 @@ class BusViewer: UIViewController {
             routeNum = "3164"
         } else if currentRoute == "Route B" {
             routeNum = "4512"
-        } else if currentRoute == "Route B2" {
+        } else if currentRoute == "Route B2 via Lyle Ctr" {
             routeNum = "4513"
         } else if currentRoute == "Route C" {
             routeNum = "4515"
+        } else if currentRoute == "Route D Express" {
+            routeNum = "11512"
         }
         
         URLCache.shared.removeAllCachedResponses()
 
         let API_URL = "https://broncoshuttle.com/Route/" + routeNum + "/Stop/" + String(currentStopID)  + "/Arrivals?customerID=21"
-    
+        
         AF.request(API_URL).responseJSON { response in
            
             let json = response.data
@@ -168,8 +170,7 @@ class BusViewer: UIViewController {
                     print(progressPercent)
                     print(self.shuttles[0].secondsToArrival)
                     
-                    self.eta.text = "ETA @ " + self.shuttles[0].arriveTime
-                    
+                    self.eta.text = "ETA @ " + self.shuttles[0].arriveTime                    
                     self.progress.setProgress(Float(progressPercent), animated: true)
                     if self.shuttles[0].minutes == 0 {
                         self.arrivalMin.text = "The shuttle is arriving shortly"
@@ -194,6 +195,4 @@ class BusViewer: UIViewController {
             currentRoute = (cell.textLabel?.text)!
         }
     }
-    
-    
 }
